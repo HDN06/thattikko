@@ -1,6 +1,6 @@
 import { createFileRoute } from "@tanstack/react-router";
 
-import { PageShell } from "@/components/labdrop/site-chrome";
+import { SiteHeader } from "@/components/labdrop/site-chrome";
 import heroAsset from "@/assets/thattikko-3d.png";
 
 const CONSTRUCTION_TEXT =
@@ -31,10 +31,12 @@ export const Route = createFileRoute("/")({
 
 function Landing() {
   return (
-    <PageShell>
-      <section className="mx-auto flex min-h-[calc(100vh-150px)] w-full max-w-6xl flex-col items-center px-5 py-10 text-center sm:py-16">
-        {/* Main THATTIKKO hero */}
-        <div className="flex flex-1 flex-col items-center justify-center">
+    <div className="flex min-h-screen flex-col bg-background">
+      <SiteHeader />
+
+      <main className="flex flex-1 flex-col">
+        {/* Hero */}
+        <section className="mx-auto flex w-full max-w-6xl flex-1 flex-col items-center justify-center px-5 py-10 text-center sm:py-16">
           <img
             src={heroAsset}
             alt="തട്ടിക്കോ.fun"
@@ -43,7 +45,7 @@ function Landing() {
           />
 
           <p className="-mt-1 text-lg font-bold text-primary sm:text-2xl">
-            Don't log in. Just{" "}
+            Don&apos;t log in. Just{" "}
             <span className="relative inline-block">
               Thattikko.
               <span
@@ -52,16 +54,18 @@ function Landing() {
               />
             </span>
           </p>
-        </div>
+        </section>
 
-        {/* Temporary construction marquee */}
-        <div className="relative left-1/2 mt-10 w-screen -translate-x-1/2 overflow-hidden bg-secondary py-3">
-          <div className="marquee-track flex w-max gap-8 whitespace-nowrap font-display text-xl font-bold text-primary sm:text-2xl">
+        {/* Under Construction Marquee */}
+        <div className="w-full overflow-hidden bg-secondary py-3">
+          <div className="marquee-track flex w-max whitespace-nowrap font-display text-xl font-bold text-primary sm:text-2xl">
             <span>{CONSTRUCTION_TEXT}</span>
+            <span aria-hidden="true">{CONSTRUCTION_TEXT}</span>
+            <span aria-hidden="true">{CONSTRUCTION_TEXT}</span>
             <span aria-hidden="true">{CONSTRUCTION_TEXT}</span>
           </div>
         </div>
-      </section>
-    </PageShell>
+      </main>
+    </div>
   );
 }
