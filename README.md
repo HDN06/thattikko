@@ -1,6 +1,6 @@
 <img width="3004" height="816" alt="image" src="https://github.com/user-attachments/assets/2bd462f2-c485-4362-ac87-4acaa3833a58" />
 
-# THATTIKKO.FUN 🟢💛
+# Thattikko.fun
 
 > **Don't log in. Just Thattikko. 😉**
 
