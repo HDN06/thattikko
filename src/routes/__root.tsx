@@ -154,8 +154,7 @@ function RootShell({ children }: { children: ReactNode }) {
 
       <body>
         {children}
-        <script data-name="BMC-Widget" data-cfasync="false" src="https://cdnjs.buymeacoffee.com/1.0.0/widget.prod.min.js" data-id="iamaneleldb" data-description="Support me on Buy me a coffee!" data-message="Enjoying Thattikko? Buy me a chai. ☕💛" data-color="#BD5FFF" data-position="Right" data-x_margin="18" data-y_margin="18"></script>
-        <Scripts />
+        <script type="text/javascript" src="https://cdnjs.buymeacoffee.com/1.0.0/button.prod.min.js" data-name="bmc-button" data-slug="iamaneleldb" data-color="#017511" data-emoji=""  data-font="Cookie" data-text="Buy me a coffee" data-outline-color="#ffffff" data-font-color="#ffffff" data-coffee-color="#FFDD00" ></script>
       </body>
     </html>
   );
