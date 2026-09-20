@@ -62,6 +62,18 @@ Live website: https://thattikko.fun
 ## Project Structure
 
 ```text
+thattikko/
+├── public/          # Static files and favicon
+├── src/
+│   ├── assets/      # Images and assets
+│   ├── components/  # UI components
+│   ├── integrations/ # Supabase integration
+│   ├── lib/         # App logic and utilities
+│   ├── routes/      # Application routes
+│   └── styles.css   # Global styles
+├── supabase/        # Supabase configuration
+├── package.json
+└── vite.config.ts
 ````
 
 ---
