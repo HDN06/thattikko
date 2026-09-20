@@ -1,5 +1,5 @@
 # THATTIKKO.FUN 🟢💛
-<img width="500" height="123" alt="image" src="https://github.com/user-attachments/assets/f29e3d66-14b1-4fe8-a569-4211024a71bc" />
+<img width="1500" height="123" alt="image" src="https://github.com/user-attachments/assets/f29e3d66-14b1-4fe8-a569-4211024a71bc" />
 
 
 > **Don't log in. Just Thattikko. 😉**
