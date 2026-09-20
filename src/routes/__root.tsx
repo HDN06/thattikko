@@ -154,8 +154,6 @@ function RootShell({ children }: { children: ReactNode }) {
 
       <body>
         {children}
-
-        {/* space ad buy me cofee */}
       </body>
     </html>
   );
