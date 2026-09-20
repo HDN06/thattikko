@@ -15,8 +15,6 @@ Thattikko.fun was created to solve a simple problem in college computer labs: ge
 
 Create a temporary session, connect your phone and computer using a pairing code, send what you need, and finish without leaving your personal account logged in.
 
-Live website: https://thattikko.fun
-
 ---
 
 ## Features
