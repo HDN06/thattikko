@@ -33,8 +33,8 @@ export const Route = createFileRoute("/")({
 
 function ConstructionMarquee() {
   return (
-    <div className="w-full shrink-0 overflow-hidden bg-secondary py-2.5 sm:py-3">
-      <div className="marquee-track flex w-max whitespace-nowrap font-display text-base font-bold text-primary sm:text-2xl">
+    <div className="w-full shrink-0 overflow-hidden bg-[#FFC300] py-2.5 sm:py-3">
+      <div className="marquee-track flex w-max whitespace-nowrap font-display text-base font-bold text-[#017511] sm:text-2xl">
         <span>{CONSTRUCTION_TEXT}</span>
         <span aria-hidden="true">{CONSTRUCTION_TEXT}</span>
         <span aria-hidden="true">{CONSTRUCTION_TEXT}</span>
