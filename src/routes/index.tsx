@@ -1,23 +1,28 @@
-import { createFileRoute, Link } from "@tanstack/react-router";
+import { createFileRoute } from "@tanstack/react-router";
 
 import { PageShell } from "@/components/labdrop/site-chrome";
-//import heroAsset from "@/assets/thattikko-3d.png.asset.json";
 import heroAsset from "@/assets/thattikko-3d.png";
+
+const CONSTRUCTION_TEXT =
+  "UNDER CONSTRUCTION • UNDER CONSTRUCTION • UNDER CONSTRUCTION • UNDER CONSTRUCTION • ";
 
 export const Route = createFileRoute("/")({
   head: () => ({
     meta: [
-      { title: "തട്ടിക്കോ.fun — Don't log in. Just Thattikko." },
+      { title: "തട്ടിക്കോ.fun — Under Construction" },
       {
         name: "description",
         content:
-          "A temporary, account-free bridge that sends code, text, images and files from your phone to a shared computer. No logins, nothing left behind.",
+          "Thattikko is currently under construction. Don't log in. Just Thattikko.",
       },
-      { property: "og:title", content: "തട്ടിക്കോ.fun — Don't log in. Just Thattikko." },
+      {
+        property: "og:title",
+        content: "തട്ടിക്കോ.fun — Under Construction",
+      },
       {
         property: "og:description",
         content:
-          "Pair your phone with a shared computer using a 6-digit code. Everything is deleted when the session ends.",
+          "Thattikko is currently under construction. We'll be back soon.",
       },
     ],
   }),
@@ -27,44 +32,35 @@ export const Route = createFileRoute("/")({
 function Landing() {
   return (
     <PageShell>
-      <section className="mx-auto flex max-w-6xl flex-col items-center px-5 py-10 text-center sm:py-16">
-        <img
-          src={heroAsset} //changed .url thing
-          alt="തട്ടിക്കോ.fun"
-          className="w-full max-w-3xl select-none"
-          draggable={false}
-        />
+      <section className="mx-auto flex min-h-[calc(100vh-150px)] w-full max-w-6xl flex-col items-center px-5 py-10 text-center sm:py-16">
+        {/* Main THATTIKKO hero */}
+        <div className="flex flex-1 flex-col items-center justify-center">
+          <img
+            src={heroAsset}
+            alt="തട്ടിക്കോ.fun"
+            className="w-full max-w-3xl select-none"
+            draggable={false}
+          />
 
-        <p className="-mt-1 text-lg font-bold text-primary sm:text-2xl">
-          Don't log in. Just{" "}
-          <span className="relative inline-block">
-            Thattikko.
-            <span
-              aria-hidden="true"
-              className="absolute -bottom-1 left-0 h-[4px] w-[86%] rounded-full bg-brand-red"
-            />
-          </span>
-        </p>
-
-        <div className="mt-12 flex flex-col gap-4 sm:flex-row sm:gap-6">
-          <Link
-            to="/session"
-            className="rounded-lg bg-primary px-10 py-4 font-display text-xl tracking-wide text-primary-foreground transition-colors hover:bg-primary/90"
-          >
-            CREATE SESSION
-          </Link>
-          <Link
-            to="/connect"
-            className="rounded-lg border-2 border-primary px-10 py-4 font-display text-xl tracking-wide text-primary transition-colors hover:bg-primary hover:text-primary-foreground"
-          >
-            JOIN SESSION
-          </Link>
+          <p className="-mt-1 text-lg font-bold text-primary sm:text-2xl">
+            Don't log in. Just{" "}
+            <span className="relative inline-block">
+              Thattikko.
+              <span
+                aria-hidden="true"
+                className="absolute -bottom-1 left-0 h-[4px] w-[86%] rounded-full bg-brand-red"
+              />
+            </span>
+          </p>
         </div>
 
-        <p className="mt-8 max-w-xl text-sm text-muted-foreground">
-          Create the session on your phone. Join it on the shared computer. Send code, text, images and
-          files — everything disappears when the session ends.
-        </p>
+        {/* Temporary construction marquee */}
+        <div className="relative left-1/2 mt-10 w-screen -translate-x-1/2 overflow-hidden bg-secondary py-3">
+          <div className="marquee-track flex w-max gap-8 whitespace-nowrap font-display text-xl font-bold text-primary sm:text-2xl">
+            <span>{CONSTRUCTION_TEXT}</span>
+            <span aria-hidden="true">{CONSTRUCTION_TEXT}</span>
+          </div>
+        </div>
       </section>
     </PageShell>
   );
