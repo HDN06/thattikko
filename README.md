@@ -5,13 +5,13 @@
 > **Don't log in. Just Thattikko. 😉**
 
 <br>
-THATTIKKO.FUN is a simple, temporary way to send files and content from your **phone to a computer** without logging into personal accounts.
+A simple, temporary way to send files and content from your **phone to a computer** without logging into personal accounts.
 
 <!-- <img width="1574" height="967" alt="yeahhhhhh 2026-09-18 at 8 23 21 PM" src="https://github.com/user-attachments/assets/cc9b50db-b3ef-4247-bd64-45dbc514edbb" /> -->
 
 ## About
 
-THATTIKKO.FUN was created to solve a simple problem in college computer labs: getting something from your phone onto a shared computer without logging into Google Drive, WhatsApp Web, email, or another personal account.
+Thattikko.fun was created to solve a simple problem in college computer labs: getting something from your phone onto a shared computer without logging into Google Drive, WhatsApp Web, email, or another personal account.
 
 Create a temporary session, connect your phone and computer using a pairing code, send what you need, and finish without leaving your personal account logged in.
 
