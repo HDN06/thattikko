@@ -1,9 +1,12 @@
 import { createFileRoute } from "@tanstack/react-router";
+import { useEffect, useState } from "react";
 
 import heroAsset from "@/assets/thattikko-3d.png";
 
 const CONSTRUCTION_TEXT =
   "UNDER CONSTRUCTION • UNDER CONSTRUCTION • UNDER CONSTRUCTION • UNDER CONSTRUCTION • ";
+
+const POPUP_STORAGE_KEY = "thattikko-maintenance-popup-seen";
 
 export const Route = createFileRoute("/")({
   head: () => ({
@@ -21,7 +24,7 @@ export const Route = createFileRoute("/")({
       {
         property: "og:description",
         content:
-          "Thattikko is currently under construction. We'll be back soon.",
+          "Thattikko is getting a little maintenance makeover. We'll be back soon.",
       },
     ],
   }),
@@ -41,7 +44,91 @@ function ConstructionMarquee() {
   );
 }
 
+function MaintenancePopup({
+  onClose,
+}: {
+  onClose: () => void;
+}) {
+  return (
+    <div
+      className="fixed inset-0 z-50 flex items-center justify-center bg-black/30 px-5 py-6 backdrop-blur-[2px]"
+      onClick={onClose}
+      role="presentation"
+    >
+      <div
+        role="dialog"
+        aria-modal="true"
+        aria-labelledby="maintenance-title"
+        className="relative w-full max-w-md border-2 border-black bg-background p-6 shadow-[7px_7px_0_0_#000] sm:p-8"
+        onClick={(event) => event.stopPropagation()}
+      >
+        {/* Close button */}
+        <button
+          type="button"
+          onClick={onClose}
+          aria-label="Close maintenance message"
+          className="absolute right-3 top-3 flex h-8 w-8 items-center justify-center text-xl font-black text-primary transition-transform hover:rotate-6"
+        >
+          ×
+        </button>
+
+        {/* Accent */}
+        <div
+          aria-hidden="true"
+          className="mb-5 h-2 w-16 bg-secondary"
+        />
+
+        <h2
+          id="maintenance-title"
+          className="pr-8 font-display text-2xl font-black uppercase leading-tight text-primary sm:text-3xl"
+        >
+          Oops. Maintenance time.
+        </h2>
+
+        <p className="mt-5 text-sm font-medium leading-relaxed text-foreground sm:text-base">
+          We&apos;re doing some Thattikko magic behind the scenes.
+        </p>
+
+        <p className="mt-3 text-sm font-medium leading-relaxed text-foreground sm:text-base">
+          The app will be back live once we&apos;re done kicking the bugs out.
+        </p>
+
+        <p className="mt-4 text-sm font-bold text-primary">
+          Don&apos;t log in yet. We&apos;re almost ready.
+        </p>
+
+        <button
+          type="button"
+          onClick={onClose}
+          className="mt-7 w-full border-2 border-black bg-primary px-6 py-3 font-display text-base font-bold tracking-wide text-primary-foreground transition-transform hover:-translate-y-0.5 active:translate-y-0"
+        >
+          GOT IT
+        </button>
+      </div>
+    </div>
+  );
+}
+
 function Landing() {
+  const [showPopup, setShowPopup] = useState(false);
+
+  useEffect(() => {
+    const hasSeenPopup = sessionStorage.getItem(POPUP_STORAGE_KEY);
+
+    if (!hasSeenPopup) {
+      const timer = window.setTimeout(() => {
+        setShowPopup(true);
+      }, 400);
+
+      return () => window.clearTimeout(timer);
+    }
+  }, []);
+
+  function closePopup() {
+    sessionStorage.setItem(POPUP_STORAGE_KEY, "true");
+    setShowPopup(false);
+  }
+
   return (
     <div className="flex h-[100svh] min-h-[100svh] flex-col overflow-hidden bg-background">
       {/* Top construction marquee */}
@@ -72,6 +159,9 @@ function Landing() {
 
       {/* Bottom construction marquee */}
       <ConstructionMarquee />
+
+      {/* Maintenance popup */}
+      {showPopup && <MaintenancePopup onClose={closePopup} />}
     </div>
   );
 }
