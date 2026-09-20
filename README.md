@@ -213,16 +213,3 @@ The application also uses a private Supabase Storage bucket for temporary file t
 
 This project is currently not licensed for redistribution or commercial use.
 
-A formal open-source license will be added if and when the project is officially open-sourced.
-
----
-
-<p align="center">
-  Don't log in. Just Thattikko.
-</p>
-
-<p align="center">
-  https://thattikko.fun
-</p>
-```
-
