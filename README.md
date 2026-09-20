@@ -1,11 +1,13 @@
 # THATTIKKO.FUN 🟢💛
+<img width="363" height="123" alt="image" src="https://github.com/user-attachments/assets/f29e3d66-14b1-4fe8-a569-4211024a71bc" />
+
 
 > **Don't log in. Just Thattikko. 😉**
 
 <br>
 THATTIKKO.FUN is a simple, temporary way to send files and content from your **phone to a computer** without logging into personal accounts.
 
-<img width="1574" height="967" alt="yeahhhhhh 2026-09-18 at 8 23 21 PM" src="https://github.com/user-attachments/assets/cc9b50db-b3ef-4247-bd64-45dbc514edbb" />
+<!-- <img width="1574" height="967" alt="yeahhhhhh 2026-09-18 at 8 23 21 PM" src="https://github.com/user-attachments/assets/cc9b50db-b3ef-4247-bd64-45dbc514edbb" /> -->
 
 
 ## ✨ Key Features
