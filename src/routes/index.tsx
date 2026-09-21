@@ -2,6 +2,7 @@ import { createFileRoute } from "@tanstack/react-router";
 import { useEffect, useState } from "react";
 
 import heroAsset from "@/assets/thattikko-3d.png";
+import constructionImage from "./assets/construction-3d.png";
 
 const CONSTRUCTION_TEXT =
   "UNDER CONSTRUCTION • UNDER CONSTRUCTION • UNDER CONSTRUCTION • UNDER CONSTRUCTION • ";
@@ -157,7 +158,7 @@ function Landing() {
         </section>
       </main>
       <img
-        src="src/assets/construction-3d.png"
+        src={constructionImage}
         alt="Under construction"
         className="absolute bottom-[70px] right-8 w-64 md:w-80 lg:w-96 z-20 pointer-events-none"
       />
