@@ -156,7 +156,11 @@ function Landing() {
           </p>
         </section>
       </main>
-
+      <img
+        src="/assets/construction-3d.png"
+        alt="Under construction"
+        className="absolute bottom-[70px] right-8 w-64 md:w-80 lg:w-96 z-20 pointer-events-none"
+      />
       {/* Bottom construction marquee */}
       <ConstructionMarquee />
 

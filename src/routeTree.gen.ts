@@ -15,6 +15,7 @@ import { Route as FaqRouteImport } from './routes/faq'
 import { Route as FeaturesRouteImport } from './routes/features'
 import { Route as HowItWorksRouteImport } from './routes/how-it-works'
 import { Route as SessionRouteImport } from './routes/session'
+import { Route as TryRouteImport } from './routes/try'
 import { Route as ApiPublicHooksCleanupRouteImport } from './routes/api/public/hooks/cleanup'
 
 const IndexRoute = IndexRouteImport.update({
@@ -47,6 +48,11 @@ const SessionRoute = SessionRouteImport.update({
   path: '/session',
   getParentRoute: () => rootRouteImport,
 } as any)
+const TryRoute = TryRouteImport.update({
+  id: '/try',
+  path: '/try',
+  getParentRoute: () => rootRouteImport,
+} as any)
 const ApiPublicHooksCleanupRoute = ApiPublicHooksCleanupRouteImport.update({
   id: '/api/public/hooks/cleanup',
   path: '/api/public/hooks/cleanup',
@@ -60,6 +66,7 @@ export interface FileRoutesByFullPath {
   '/features': typeof FeaturesRoute
   '/how-it-works': typeof HowItWorksRoute
   '/session': typeof SessionRoute
+  '/try': typeof TryRoute
   '/api/public/hooks/cleanup': typeof ApiPublicHooksCleanupRoute
 }
 export interface FileRoutesByTo {
@@ -69,6 +76,7 @@ export interface FileRoutesByTo {
   '/features': typeof FeaturesRoute
   '/how-it-works': typeof HowItWorksRoute
   '/session': typeof SessionRoute
+  '/try': typeof TryRoute
   '/api/public/hooks/cleanup': typeof ApiPublicHooksCleanupRoute
 }
 export interface FileRoutesById {
@@ -79,6 +87,7 @@ export interface FileRoutesById {
   '/features': typeof FeaturesRoute
   '/how-it-works': typeof HowItWorksRoute
   '/session': typeof SessionRoute
+  '/try': typeof TryRoute
   '/api/public/hooks/cleanup': typeof ApiPublicHooksCleanupRoute
 }
 export interface FileRouteTypes {
@@ -90,6 +99,7 @@ export interface FileRouteTypes {
     | '/features'
     | '/how-it-works'
     | '/session'
+    | '/try'
     | '/api/public/hooks/cleanup'
   fileRoutesByTo: FileRoutesByTo
   to:
@@ -99,6 +109,7 @@ export interface FileRouteTypes {
     | '/features'
     | '/how-it-works'
     | '/session'
+    | '/try'
     | '/api/public/hooks/cleanup'
   id:
     | '__root__'
@@ -108,6 +119,7 @@ export interface FileRouteTypes {
     | '/features'
     | '/how-it-works'
     | '/session'
+    | '/try'
     | '/api/public/hooks/cleanup'
   fileRoutesById: FileRoutesById
 }
@@ -118,6 +130,7 @@ export interface RootRouteChildren {
   FeaturesRoute: typeof FeaturesRoute
   HowItWorksRoute: typeof HowItWorksRoute
   SessionRoute: typeof SessionRoute
+  TryRoute: typeof TryRoute
   ApiPublicHooksCleanupRoute: typeof ApiPublicHooksCleanupRoute
 }
 
@@ -165,6 +178,13 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof SessionRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/try': {
+      id: '/try'
+      path: '/try'
+      fullPath: '/try'
+      preLoaderRoute: typeof TryRouteImport
+      parentRoute: typeof rootRouteImport
+    }
     '/api/public/hooks/cleanup': {
       id: '/api/public/hooks/cleanup'
       path: '/api/public/hooks/cleanup'
@@ -182,6 +202,7 @@ const rootRouteChildren: RootRouteChildren = {
   FeaturesRoute: FeaturesRoute,
   HowItWorksRoute: HowItWorksRoute,
   SessionRoute: SessionRoute,
+  TryRoute: TryRoute,
   ApiPublicHooksCleanupRoute: ApiPublicHooksCleanupRoute,
 }
 export const routeTree = rootRouteImport
