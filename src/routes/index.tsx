@@ -2,7 +2,7 @@ import { createFileRoute } from "@tanstack/react-router";
 import { useEffect, useState } from "react";
 
 import heroAsset from "@/assets/thattikko-3d.png";
-import constructionImage from "./assets/construction-3d.png";
+import constructionImage from "@/assets/construction-3d.png";
 
 const CONSTRUCTION_TEXT =
   "UNDER CONSTRUCTION • UNDER CONSTRUCTION • UNDER CONSTRUCTION • UNDER CONSTRUCTION • ";
