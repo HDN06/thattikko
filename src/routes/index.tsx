@@ -160,7 +160,7 @@ function Landing() {
       <img
         src={constructionImage}
         alt="Under construction"
-        className="fixed bottom-[60px] right-4 md:right-8 w-24 md:w-32 lg:w-36 z-40 pointer-events-none"
+        className="fixed bottom-[57px] right-4 md:right-8 w-24 md:w-32 lg:w-36 z-40 pointer-events-none"
       />
       {/* Bottom construction marquee */}
       <ConstructionMarquee />
