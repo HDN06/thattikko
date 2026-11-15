@@ -209,5 +209,5 @@ The application also uses a private Supabase Storage bucket for temporary file t
 
 ## License
 
-This project is currently not licensed for redistribution or commercial use.
+This project is licensed under the [MIT License](LICENSE).
 
